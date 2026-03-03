@@ -556,7 +556,7 @@
 
         window.sendWhatsApp = (n, p) => {
             const sess = state.sessions.find(s => s.id === state.activeSession);
-            const msg = `تنبيه من إدارة مستر وليد زبادي: \nنحيطكم علماً بأن الطالب (${n}) لم يحضر حصة ${sess.title} اليوم. \nيرجى المتابعة.`;
+            const msg = 'تنبيه من إدارة مستر محمد مسعود جوجل: \nنحيطكم علماً بأن الطالب (${n}) لم يحضر حصة ${sess.title} اليوم. \nيرجى المتابعة.`;
             window.open(`https://wa.me/2${p}?text=${encodeURIComponent(msg)}`);
         };
 
@@ -870,3 +870,4 @@
     </script>
 </body>
 </html>
+
