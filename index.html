@@ -193,6 +193,9 @@
                             <div class="flex gap-2">
                                 <select id="std-grade" class="w-1/2 p-4 rounded-2xl outline-none text-sm font-bold">
                                     <option value="">-- الصف --</option>
+                                    <option value="4ب">4 ابتدائي</option>
+                                    <option value="5ب">5 ابتدائي</option>
+                                    <option value="6ب">6 ابتدائي</option>
                                     <option value="1ع">1 إعدادي</option>
                                     <option value="2ع">2 إعدادي</option>
                                     <option value="3ع">3 إعدادي</option>
@@ -210,6 +213,9 @@
 
                     <div class="flex overflow-x-auto gap-2 mb-6 no-scrollbar pb-2 px-1">
                         <button onclick="setStdFilter('all')" class="std-tab-btn filter-btn active">الكل</button>
+                        <button onclick="setStdFilter('4ب')" class="std-tab-btn filter-btn">4ب</button>
+                        <button onclick="setStdFilter('5ب')" class="std-tab-btn filter-btn">5ب</button>
+                        <button onclick="setStdFilter('6ب')" class="std-tab-btn filter-btn">6ب</button>
                         <button onclick="setStdFilter('1ع')" class="std-tab-btn filter-btn">1ع</button>
                         <button onclick="setStdFilter('2ع')" class="std-tab-btn filter-btn">2ع</button>
                         <button onclick="setStdFilter('3ع')" class="std-tab-btn filter-btn">3ع</button>
@@ -234,6 +240,7 @@
                             <div class="flex gap-2">
                                 <select id="sess-grade" class="w-1/2 p-4 rounded-2xl outline-none text-sm font-bold">
                                     <option value="">-- الصف --</option>
+                                    <option value="4ب">4ب</option><option value="5ب">5ب</option><option value="6ب">6ب</option>
                                     <option value="1ع">1ع</option><option value="2ع">2ع</option><option value="3ع">3ع</option>
                                     <option value="1ث">1ث</option><option value="2ث">2ث</option><option value="3ث">3ث</option>
                                 </select>
@@ -556,7 +563,7 @@
 
         window.sendWhatsApp = (n, p) => {
             const sess = state.sessions.find(s => s.id === state.activeSession);
-            const msg = `تنبيه من إدارة مستر محمد مسعود جوجل: \nنحيطكم علماً بأن الطالب (${n}) لم يحضر حصة ${sess.title} اليوم. \nيرجى المتابعة.`;
+            const msg = `تنبيه من إدارة مستر وليد زبادي: \nنحيطكم علماً بأن الطالب (${n}) لم يحضر حصة ${sess.title} اليوم. \nيرجى المتابعة.`;
             window.open(`https://wa.me/2${p}?text=${encodeURIComponent(msg)}`);
         };
 
